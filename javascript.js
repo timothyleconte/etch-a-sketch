@@ -5,8 +5,7 @@ function grid(){
         div.addEventListener("mouseover", () =>{
             div.style.backgroundColor = "blue";
         })
-        div.style.flexBasis = "6%";
-        div.style.padding = "1px";
+        div.style.flexBasis = "6.25%";
         container.appendChild(div);
     }
  
