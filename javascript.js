@@ -1,4 +1,4 @@
-const container = document.querySelector (".container")
+const container = document.querySelector (".container");
 function grid(){
     for (let i = 1; i < 257; i++){
         const div = document.createElement("div");
@@ -11,4 +11,12 @@ function grid(){
  
 }
 
-grid()
+grid();
+
+const button = document.querySelector(".selectSize");
+
+button.addEventListener("click", () => {
+
+    let size = prompt("What grid size would you like?", "maximum 100x100")
+
+})
