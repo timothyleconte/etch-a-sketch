@@ -53,14 +53,6 @@ function randomColor (){
 
 };
 
-const rainbowColor = randomColor();
-
-function gradientRainbow(){
-
-
-
-}
-
 
 function gridRainbow(size){
 
@@ -72,7 +64,7 @@ function gridRainbow(size){
         const div = document.createElement("div");
         div.classList.add("canvas")
         div.addEventListener("mouseover", () =>{
-            div.style.backgroundColor = rainbowColor;
+            div.style.backgroundColor = randomColor();
         })
         div.style.flexBasis = flex + "%";
         container.appendChild(div);
