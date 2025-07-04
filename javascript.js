@@ -7,6 +7,7 @@ function grid(size){
     for (let i = 1; i < newSize; i++){
         
         const div = document.createElement("div");
+        div.classList.add("canvas")
         div.addEventListener("mouseover", () =>{
             div.style.backgroundColor = "blue";
         })
@@ -21,6 +22,8 @@ grid(16);
 const button = document.querySelector(".selectSize");
 
 button.addEventListener("click", () => {
+
+    const divNode = document.querySelector("div.class")
 
     let size = prompt("What grid size would you like?", "Enter a value between 1-100")
 
