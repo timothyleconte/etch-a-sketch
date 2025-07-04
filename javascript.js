@@ -49,6 +49,10 @@ gridSize.addEventListener("click", () => {
         removeElements();
         grid(size);
     }
+    clearCanvas.addEventListener("click", () =>{
+    removeElements();
+    grid(size);
+})
 })
 
 
