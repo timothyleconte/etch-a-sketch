@@ -23,9 +23,17 @@ function removeElements(){
     divNode.forEach(element =>{
         element.remove();
         });
-        }
+}
+
+const clearCanvas = document.querySelector (".clearCanvas");
+
 
 grid(16);
+
+clearCanvas.addEventListener("click", () =>{
+    removeElements();
+    grid(16);
+})
 
 const gridSize = document.querySelector(".gridSize");
 
