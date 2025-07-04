@@ -2,7 +2,7 @@ const container = document.querySelector (".container");
 function grid(size){
 
     let newSize = (size * size) + 1
-    // let flex = `100 / ${size}`
+    let flex = 100 / size
 
     for (let i = 1; i < newSize; i++){
         
@@ -10,7 +10,7 @@ function grid(size){
         div.addEventListener("mouseover", () =>{
             div.style.backgroundColor = "blue";
         })
-        div.style.flexBasis = "6.25%";
+        div.style.flexBasis = flex + "%";
         container.appendChild(div);
     }
  
