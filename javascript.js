@@ -19,9 +19,9 @@ function grid(size){
 
 grid(16);
 
-const button = document.querySelector(".selectSize");
+const gridSize = document.querySelector(".gridSize");
 
-button.addEventListener("click", () => {
+gridSize.addEventListener("click", () => {
 
     let size = prompt("What grid size would you like?", "Enter a value between 1-100")
 
@@ -41,4 +41,45 @@ button.addEventListener("click", () => {
         removeElements();
         grid(size);
     }
+})
+
+
+function randomColor (){
+    const red = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+
+    return "rgb(" + `${red}, ${blue}, ${green}` + ")"
+
+}
+
+const rainbowColor = randomColor();
+
+
+function gridRainbow(size){
+
+    let newSize = (size * size) + 1
+    let flex = 100 / size
+
+    for (let i = 1; i < newSize; i++){
+        
+        const div = document.createElement("div");
+        div.classList.add("canvas")
+        div.addEventListener("mouseover", () =>{
+            div.style.backgroundColor = rainbowColor;
+        })
+        div.style.flexBasis = flex + "%";
+        container.appendChild(div);
+    }
+ 
+}
+
+
+
+const rainbowMode = document.querySelector(".rainbowMode")
+
+rainbowMode.addEventListener("click", () => {
+
+    gridRainbow(16);
+
 })
