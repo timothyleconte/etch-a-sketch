@@ -49,11 +49,17 @@ function randomColor (){
     const blue = Math.floor(Math.random() * 256);
     const green = Math.floor(Math.random() * 256);
 
-    return "rgb(" + `${red}, ${blue}, ${green}` + ")"
+    return "rgb(" + `${red}, ${blue}, ${green}` + ")";
 
-}
+};
 
 const rainbowColor = randomColor();
+
+function gradientRainbow(){
+
+
+
+}
 
 
 function gridRainbow(size){
@@ -76,7 +82,7 @@ function gridRainbow(size){
 
 
 
-const rainbowMode = document.querySelector(".rainbowMode")
+const rainbowMode = document.querySelector(".rainbowMode");
 
 rainbowMode.addEventListener("click", () => {
 
