@@ -17,6 +17,14 @@ function grid(size){
  
 }
 
+function removeElements(){
+    const divNode = document.querySelectorAll("div.canvas");
+
+    divNode.forEach(element =>{
+        element.remove();
+        });
+        }
+
 grid(16);
 
 const gridSize = document.querySelector(".gridSize");
@@ -30,14 +38,6 @@ gridSize.addEventListener("click", () => {
     }else if (size < 1){
         alert("Value is too small. Please enter a minimum value of 1")
     }else{
-
-        function removeElements(){
-            const divNode = document.querySelectorAll("div.canvas");
-
-            divNode.forEach(element =>{
-                element.remove();
-            });
-        }
         removeElements();
         grid(size);
     }
@@ -85,14 +85,6 @@ rainbowMode.addEventListener("click", () => {
     }else if (size < 1){
         alert("Value is too small. Please enter a minimum value of 1")
     }else{
-
-        function removeElements(){
-            const divNode = document.querySelectorAll("div.canvas");
-
-            divNode.forEach(element =>{
-                element.remove();
-            });
-        }
         removeElements();
         gridRainbow(size);
     }
