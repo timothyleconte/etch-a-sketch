@@ -94,8 +94,11 @@ const rainbowMode = document.querySelector(".rainbowMode");
 rainbowMode.addEventListener("click", () => {
     
     let size = prompt("What grid size would you like?", "Enter a value between 1-100")
-
-    if (size > 100){
+    
+    if (size === null){
+    }else if (size === "Enter a value between 1-100"){
+        alert("You must enter a value");
+    }else if (size > 100){
         alert("Value is too large, please enter a maximum value of 100")
     }else if (size < 1){
         alert("Value is too small. Please enter a minimum value of 1")
