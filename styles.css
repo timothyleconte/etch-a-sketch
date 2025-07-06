@@ -17,4 +17,12 @@
 .selectSize{
     display:flex;
     flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+    margin-right: 25px;
+}
+
+h1{
+    text-align: center;
+    margin-left: 100px;
 }
