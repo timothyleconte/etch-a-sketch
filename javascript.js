@@ -113,16 +113,6 @@ rainbowMode.addEventListener("click", () => {
     
 })
 
-//start opacity work here; not yet working properly
-
-
-function increasingOpacity(element){
-    
-
-    
-    element.style.opacity = "0.1 += 0.1"
-}
-
 function opacityGrid(size){
 
     let newSize = (size * size) + 1;
@@ -132,12 +122,18 @@ function opacityGrid(size){
     for (let i = 1; i < newSize; i++){
         
         const div = document.createElement("div");
-        div.classList.add("canvas")
-        div.style.backgroundColor = "white"
-        div.addEventListener("mouseover", () =>{
-        
-           increasingOpacity(div);
+        div.classList.add("canvas");
+        let currentOpacity = 1;
+        div.style.backgroundColor = "white";
 
+        div.addEventListener("mouseover", () =>{
+
+            let newOpacity = currentOpacity -= 0.1;
+        
+           div.style.opacity = newOpacity;
+           div.style.backgroundColor = "white";
+
+            console.log(newOpacity);
         })
         div.style.flexBasis = flex + "%";
         container.appendChild(div);
